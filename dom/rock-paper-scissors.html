@@ -10,11 +10,16 @@
      <button onclick="playGame('rock')">Rock</button>
      <button onclick="playGame('paper')">Paper</button>
      <button onclick="playGame('scissors')">Scissors</button>
+
+     <p class="js-result"></p>
+     <p class="js-moves"></p>
+     <p class="js-score"></p>
+
      <button onclick="resetScores()">Reset Scores</button>
+     
      <script>
 
       let score = JSON.parse(localStorage.getItem('score')) || {wins: 0, losses:0, ties:0};
-      
       /*this is common version of this code {wins:0, losses:0, ties:0} which that written in above line
       if(score === null) {
         score = {
@@ -23,8 +28,7 @@
           ties: 0,
         };
       }*/
-      
-      
+        
       function playGame(playerMove) {
         const computerMove = pickComputerMove();
         let result = '';
@@ -60,14 +64,21 @@
         if(result === 'You win.') {
           score.wins += 1;
         }else if(result === 'You lose.') {
-          score.losses += 1;
+          score.losses += 1
         }else if(result === 'Tie.'){
           score.ties += 1;
         }
 
         localStorage.setItem('score', JSON.stringify(score));
 
-        alert(`You picked ${playerMove}. The computer picked ${computerMove}. ${result} Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`);
+        document.querySelector('.js-result')
+        .innerHTML = result;
+
+        document.querySelector('.js-moves')
+        .innerHTML = `You ${playerMove} - The computer ${computerMove}`;
+
+        updateScore();
+        displayResult();
       }
 
       
@@ -86,13 +97,26 @@
           return computerMove;
       }
 
+      function updateScore() {
+        document.querySelector('.js-score')
+          .innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Tie: ${score.ties}`
+      }
+      function displayResult() {
+       
+      }
+      function displayMoves() {
+        
+      }
+
       function resetScores() {
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;
         localStorage.removeItem('score');
+        updateScore();
         alert('All scores are reseted successfully✅');
       }
+
      </script>
    </body>
 </html>

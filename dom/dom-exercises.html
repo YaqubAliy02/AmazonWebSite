@@ -6,41 +6,61 @@
 </head>
 <body>
 
+<!-- 
+
  <button>9a</button>
  <button class="js-button-9b">9b</button>
 
  <button onclick="printer('heads')" class="js-heads-button">heads</button>
  <button onclick="printer('tails')" class="js-tails-button">tails</button>
- <p class="js-printer"></p>
-  <script>
+ <p class="js-printer"></p> -->
+ 
+  <input placeholder='Name' class='.js-input' onkeydown="eventHandler(event)">
 
-    //Task 1
-    const result = document.querySelector('button').innerHTML;
-    console.log(result);
+  <button onclick="printerName()">Submit</button>
+  <p class="js-paragraph"></p>
+ <script>
+ 
+    // //Task 1
+    // const result = document.querySelector('button').innerHTML;
+    // console.log(result);
 
-    //Task2
-    const result2 = document.querySelector('.js-button-9b').innerHTML = '9b done';
+    // //Task2
+    // const result2 = document.querySelector('.js-button-9b').innerHTML = '9b done';
 
-    //Task3
-    const headsButtonElement = document.querySelector('.js-heads-button');
-    console.log(headsButtonElement.innerHTML);
+    // //Task3
+    // const headsButtonElement = document.querySelector('.js-heads-button');
+    // console.log(headsButtonElement.innerHTML);
     
-    const tailsButtonElement = document.querySelector('.js-tails-button');
-    console.log(tailsButtonElement.innerHTML);
+    // const tailsButtonElement = document.querySelector('.js-tails-button');
+    // console.log(tailsButtonElement.innerHTML);
 
-    const printerElement = document.querySelector('.js-printer');
-    console.log(printerElement.innerHTML);
+    // const printerElement = document.querySelector('.js-printer');
+    // console.log(printerElement.innerHTML);
 
-    function printer(button) {
-      if(headsButtonElement.innerText === button) {
-        printerElement.innerHTML = 'You chose: heads';
-      }else {
-        printerElement.innerHTML = 'You chose: tails';
+    // function printer(button) {
+    //   if(headsButtonElement.innerText === button) {
+    //     printerElement.innerHTML = 'You chose: heads';
+    //   }else {
+    //     printerElement.innerHTML = 'You chose: tails';
+    //   }
+    // }
+
+
+    //Task 4 
+    function printerName() {
+      let text = document.querySelector('input').value;
+      document.querySelector('.js-paragraph').innerHTML = `Your name is: ${text}`
+    }
+    function eventHandler(event) {
+      if(event.key === 'Enter') {
+        console.log(event.key);
+        
+        printerName();
       }
     }
 
-    //Task 4
-    
+
   </script>
 </body>
 </html>

@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+ <button>9a</button>
+ <button class="js-button-9b">9b</button>
+
+ <button onclick="printer('heads')" class="js-heads-button">heads</button>
+ <button onclick="printer('tails')" class="js-tails-button">tails</button>
+ <p class="js-printer"></p>
+  <script>
+
+    //Task 1
+    const result = document.querySelector('button').innerHTML;
+    console.log(result);
+
+    //Task2
+    const result2 = document.querySelector('.js-button-9b').innerHTML = '9b done';
+
+    //Task3
+    const headsButtonElement = document.querySelector('.js-heads-button');
+    console.log(headsButtonElement.innerHTML);
+    
+    const tailsButtonElement = document.querySelector('.js-tails-button');
+    console.log(tailsButtonElement.innerHTML);
+
+    const printerElement = document.querySelector('.js-printer');
+    console.log(printerElement.innerHTML);
+
+    function printer(button) {
+      if(headsButtonElement.innerText === button) {
+        printerElement.innerHTML = 'You chose: heads';
+      }else {
+        printerElement.innerHTML = 'You chose: tails';
+      }
+    }
+
+    //Task 4
+    
+  </script>
+</body>
+</html>

@@ -11,7 +11,7 @@
       "type": "chrome",
       "request": "launch",
       "name": "Open website.html",
-      "file": "c:\\Users\\user\\Desktop\\Javascript-Course\\scripts\\arrays-loops\\home\\array-loop.html"
+      "file": "c:\\Users\\user\\Desktop\\Javascript-Course\\scripts\\arrays-loops\\lesson\\todo-list.html"
     }
   ]
 }

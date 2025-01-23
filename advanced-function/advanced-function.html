@@ -56,10 +56,26 @@
   'Read book',
   'Learn something',
   'make dinner'
-].forEach(function(value, index) {
-   console.log(value, index);
-});
+].forEach((value, index) => console.log(value, index));
 
+  const regularFunction = function() {
+    console.log('regular Function');
+  }
+
+  regularFunction();
+  const arrowFunction = () => {
+    console.log('arrow function');
+  }
+  arrowFunction();
+
+  //Short Hand of arrow function
+  const oneParam = param => {
+    console.log('you dont need bracket to around parameters');
+  }
+  oneParam();
+  const arrow = () => console.log('if your function bodys has only one line you can remove curly brackets and also does not need to write return keyword because => arrow has return feature');
+  
+  arrow();
 
 
   </script>

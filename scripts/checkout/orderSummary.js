@@ -115,8 +115,13 @@ export function renderOrderSummary() {
     return html;
   }
 
-  document.querySelector('.js-order-summary')
+  if(!cart) {
+    document.querySelector('.js-order-summary').innerHTML = 'There is not any checkout :('
+  }else {
+    document.querySelector('.js-order-summary')
     .innerHTML = cartSummaryHTML;
+  }
+  
 
   document.querySelectorAll('.js-delete-link')
     .forEach((link) => {

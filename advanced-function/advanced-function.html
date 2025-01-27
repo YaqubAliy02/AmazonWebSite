@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Function</title>
+</head>
+<body>
+  
+  <script>
+    /*
+    function greeting() {
+      console.log('hello');
+    }
+    greeting();
+
+    const num = 2;
+    const function1 = function() {
+      console.log('hello2');
+    }
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    const object1 = {
+      num: 2,
+      fun: function() {
+        console.log('hello3');
+      }
+    }
+    object1.fun();
+
+    function display(param) {
+      console.log(param);
+    }
+    display(2);
+
+    function run(param){
+      param();
+    }
+    run(function() {
+      console.log('hello4');
+    })
+
+    setTimeout(function() {
+      console.log('timeout after 3 seconds');
+    }, 3000);
+
+    console.log('next time');
+
+    setInterval(function() {
+      console.log('interval');
+    }, 2000);
+  */
+//Using forEach() function as I know we use foreach like for but this is forEach() function
+[
+  'Read book',
+  'Learn something',
+  'make dinner'
+].forEach((value, index) => console.log(value, index));
+
+  const regularFunction = function() {
+    console.log('regular Function');
+  }
+
+  regularFunction();
+  const arrowFunction = () => {
+    console.log('arrow function');
+  }
+  arrowFunction();
+
+  //Short Hand of arrow function
+  const oneParam = param => {
+    console.log('you dont need bracket to around parameters');
+  }
+  oneParam();
+  const arrow = () => console.log('if your function bodys has only one line you can remove curly brackets and also does not need to write return keyword because => arrow has return feature');
+  
+  arrow();
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+  /*const product = {
+    name: "Laptop",
+    price: 4000,
+    rating : {
+      starts: 4.5,
+      count: 55
+    },
+    func: function function1() {
+      console.log("Hello world");
+    }
+  }
+  console.log(typeof console)
+  console.log(typeof console.log);
+  console.log(product.name);
+  console.log(product.price);
+  console.log(product.rating.count);
+  console.log(product.rating.starts);
+  product.func();
+
+  let jsonStringfy = JSON.stringify(product);
+  console.log(jsonStringfy);
+  console.log(typeof jsonStringfy);
+  let parseJson = JSON.parse(jsonStringfy);
+  console.log(parseJson);
+  console.log(typeof parseJson);
+  localStorage.setItem('product', jsonStringfy);
+  let result = localStorage.getItem('product');
+  console.log('result of localStorage');
+  console.log(result);
+  let result2 = JSON.parse(result);
+  console.log(result2);
+  */
+ const object1 = {
+  message: "Hello world",
+  price: 9,
+ }
+
+ // This 3 lines are called destructoring => easier way to take properties out of an object
+ //const message = object1.message; 
+ const {message, price} = object1 // this shortcut of  the code which located at above line
+ console.log(message + " " + price);
+
+
+ 
+ const object2 = {
+  //Shorthand property
+  //message: message we can use another objects fields valus ⬅️
+  message, // this equal to code which located                🔝
+  
+  //Shorthand method
+  //method: function function1() { // this is simple way of creating method inside object
+  // console.log("Hello inner method");
+  //}
+  method() { // This is the shorthand method way to create method inside object.
+    console.log("Helle shorthand method");
+  }
+  
+ }
+ console.log(object2.message);
+ object2.method();
+
+
+ 
+ 
+  </script>
+</body>
+</html>
